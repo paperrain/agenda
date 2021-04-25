@@ -1,0 +1,60 @@
+.grid-container {
+  display: grid;
+  grid-template:
+    "a a b b"
+    "a a c c"
+    "e e d d"
+    "f f f f";
+  gap: 10px;
+  align-items: center;
+}
+
+.temp-img,
+.temp-email,
+.temp-nombre,
+.temp-phone,
+.temp-geo {
+  background: aliceblue;
+  padding: 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.temp-img {
+  grid-area: a;
+  justify-self: center;
+  align-self: center;
+  border-radius: 50%;
+}
+
+.temp-nombre {
+  grid-area: b;
+}
+
+.temp-phone {
+  grid-area: c;
+}
+
+.temp-email {
+  grid-area: d;
+}
+
+.temp-geo {
+  grid-area: e;
+}
+
+.temp-btn {
+  grid-area: f;
+  justify-self: center;
+}
+
+.temp-desc {
+  font-weight: bold;
+  display: block;
+  border-bottom: 1px solid;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,70 @@
+<p class="titulo">Añadir nuevo contacto</p>
+
+<div [ngClass]="{ ocultarDiv: contactAdded }">
+  <div class="grid-container">
+    <div class="items">
+      <p class="inputTitle">Nombre</p>
+      <input
+        class="inputForm"
+        type="text"
+        [(ngModel)]="user.name"
+        placeholder="John Doe"
+      />
+    </div>
+    <div class="items">
+      <p class="inputTitle">Alias</p>
+      <input
+        class="inputForm"
+        type="text"
+        [(ngModel)]="user.alias"
+        placeholder="John"
+      />
+    </div>
+    <div class="items">
+      <p class="inputTitle">Teléfono</p>
+      <input
+        class="inputForm"
+        type="text"
+        [(ngModel)]="user.phone"
+        placeholder="671 58 85 58"
+      />
+    </div>
+    <div class="items">
+      <p class="inputTitle">Email</p>
+      <input
+        class="inputForm"
+        type="text"
+        [(ngModel)]="user.email"
+        placeholder="nombre@email.com"
+      />
+    </div>
+    <div class="items">
+      <p class="inputTitle">Localización</p>
+      <input
+        class="inputForm"
+        type="text"
+        [(ngModel)]="user.location"
+        placeholder="Las Palmas de GC"
+      />
+    </div>
+    <div class="items">
+      <p class="inputTitle">Foto de Perfil</p>
+      <input
+        class="inputForm"
+        type="text"
+        [(ngModel)]="user.photo"
+        placeholder="URL Foto"
+      />
+    </div>
+    <div class="items-a">
+      <button class="addButton" (click)="addUser()">
+        Añadir nuevo contacto
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="ocultarDiv" [ngClass]="{ mostrarDiv: contactAdded }">
+  <p class="successMessage">¡El contacto ha sido añadido correctamente!</p>
+  <button routerLink="" class="addButton">Volver a contactos</button>
+</div>

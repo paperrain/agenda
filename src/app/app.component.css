@@ -1,0 +1,39 @@
+#contenedor {
+  display: flex;
+  width: 70%;
+  margin: 20px auto;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  min-height: 300px;
+}
+
+aside {
+  flex: 25%;
+  background: #3e2093;
+  color: #f1faee;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+main {
+  flex: 75%;
+  background: #fff;
+  color: #3e2093;
+  border-radius: 0 5px 5px 0;
+}
+
+main,
+aside {
+  padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  #contenedor {
+    width: 100%;
+    flex-direction: column;
+  }
+  aside,
+  main {
+    flex: 100%;
+  }
+}

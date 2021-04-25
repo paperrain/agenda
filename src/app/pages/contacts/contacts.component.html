@@ -1,0 +1,21 @@
+<p class="titulo">Lista de Contactos</p>
+<div [ngClass]="{ ocultarDiv: users.length }">
+  <p class="successMessage">
+    Añade un contacto desde el menú izquierdo para empezar a verlos aquí
+  </p>
+</div>
+<div class="ocultarDiv" [ngClass]="{ mostrarDiv: users.length }">
+  <div class="grid-container">
+    <div
+      class="cards"
+      *ngFor="let user of users"
+      routerLink="perfil/{{ user.id }}"
+    >
+      <div class="cards-item-img">
+        <img [src]="user.photo" [alt]="user.name" class="cards-img" />
+      </div>
+      <div class="cards-item-nombre">{{ user.name }}</div>
+      <div class="cards-item-telefono">{{ user.phone }}</div>
+    </div>
+  </div>
+</div>

@@ -2,9 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
+## Information
+
+This is a simple contacts webapp with fake api
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Development API
+
+Change dir to /api and run `json-server --watch db.json`
 
 ## Code scaffolding
 

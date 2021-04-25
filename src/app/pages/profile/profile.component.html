@@ -1,0 +1,43 @@
+<p class="titulo">Contacto de {{ user.name }}</p>
+
+<div [ngClass]="{ ocultarDiv: contactDeleted }">
+  <div class="grid-container">
+    <div class="temp-img">
+      <img
+        class="avatar"
+        [src]="user.photo"
+        alt="Foto de {{ user.name }}"
+        width="200px"
+        height="200px"
+      />
+    </div>
+    <div class="temp-nombre">
+      <span class="temp-desc">Nombre: </span>{{ user.name }} ({{ user.alias }})
+    </div>
+    <div class="temp-phone">
+      <span class="temp-desc">Teléfono: </span>{{ user.phone }}
+    </div>
+    <div class="temp-email">
+      <span class="temp-desc">E-mail: </span>{{ user.email }}
+    </div>
+    <div class="temp-geo">
+      <span class="temp-desc">Localización: </span>{{ user.location }}
+    </div>
+    <div class="temp-btn">
+      <button class="addButton" routerLink="/editar/{{ user.id }}">
+        Editar contacto
+      </button>
+
+      <button class="dangerButton" (click)="removeUser()">
+        Eliminar contacto
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="ocultarDiv" [ngClass]="{ mostrarDiv: contactDeleted }">
+  <p class="successMessage">
+    ¡El contacto ha sido <b>eliminado</b> correctamente!
+  </p>
+  <button routerLink="" class="addButton">Volver a contactos</button>
+</div>
